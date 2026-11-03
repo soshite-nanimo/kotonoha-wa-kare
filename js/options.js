@@ -1,10 +1,10 @@
 /**
- * =======================================
- * Engine Settings
+ * =============================================================================
+ * エンジン設定 (Engine Settings)
  *
- * Do not modify the ones marked with a *
- * Unless you know what you are doing
- * =======================================
+ * *印が付いているものは変更しないでください
+ * （何をしているのかを十分に理解している場合を除きます）
+ * =============================================================================
  **/
 
 'use strict';
@@ -12,95 +12,96 @@
 
 monogatari.settings({
 
-	// The name of your game, this will be used to store all the data so once
-	// you've released a game using one name, it shouldn't change. Please use the
-	// Version Setting to indicate a new release of your game!
+	// ゲームの名前。
+	// すべてのデータを保存するために使用されるため、
+	// 一度この名前でゲームをリリースした後は変更しないようにしてください。
+	// 新しいバージョンを示すには、バージョン設定を使用してください！
 	'Name': 'My Visual Novel',
 
-	// The version of your game in semantic versioning (https://semver.org/).
+	// セマンティックバージョニング (https://semver.org/) によるゲームのバージョン。
 	'Version': '0.1.0',
 
-	// Initial Label *
+	// 初期ラベル *
 	'Label': 'Start',
 
-	// Number of AutoSave Slots
+	// オートセーブのスロット数
 	'Slots': 10,
 
-	// Change to true for a MultiLanguage GameScreen.
+	// 多言語対応のゲーム画面にする場合は true に変更します。
 	'MultiLanguage': false,
 
-	// If the 'Multilanguage' setting is set to `true`. This will enable a
-	// language selection screen that will be shown before the asset loading
-	// screen. If set to false, the loading screen will appear first instead and
-	// players will have to change the language from the settings screen.
+	// 'MultiLanguage' 設定が `true` に設定されている場合、
+	// アセット読み込み画面の前に言語選択画面が表示されるようになります。
+	// false に設定した場合、代わりに読み込み画面が最初に表示され、
+	// プレイヤーは設定画面から言語を変更する必要があります。
 	'LanguageSelectionScreen': true,
 
-	// Music for the Main Menu.
+	// メインメニューの音楽。
 	'MainScreenMusic': '',
 
-	// Prefix for the Save Slots in Local Storage.
+	// ローカルストレージ内のセーブスロットの接頭辞。
 	'SaveLabel': 'Save',
 	'AutoSaveLabel': 'AutoSave',
 
-	// Turn main menu on/off; Default: true *
+	// メインメニューのオン/オフ; デフォルト: true *
 	'ShowMainScreen': true,
 
-	// Turn image preloading on/off, Default: true
+	// 画像の事前読み込み (プリロード) のオン/オフ、デフォルト: true
 	'Preload': true,
 
-	// Time interval between autosaves (In Minutes). Default: 0 (Off)
+	// オートセーブの間隔（分単位）。デフォルト: 0（オフ）
 	'AutoSave': 0,
 
-	// Enable service workers; Default: true *
+	// サービスワーカーを有効にする; デフォルト: true *
 	'ServiceWorkers': true,
 
-	// The Aspect Ratio your background images are on. This only has effect on
-	// web deployed novels if forceAspectRatio flag is on.
+	// 背景画像のアスペクト比。
+	// これは、forceAspectRatio フラグがオンのときに Web 上で公開されるノベルにのみ効果があります。
 	'AspectRatio': '16:9',
 
-	// Force aspect ratio, it will make all images to comply with aspect ratio.
-	// Values: 'None' (don't force), 'Visuals' (force only visuals)
-	// or 'Global' (force all game)
+	// アスペクト比を強制します。
+	// すべての画像がアスペクト比に準拠するようにします。
+	// 値: 'None'（強制しない）、'Visuals'（ビジュアルのみ強制）、
+	// または 'Global'（ゲーム全体を強制）
 	'ForceAspectRatio': 'None',
 
-	// Enables or disables the typing text animation for the whole game.
+	// ゲーム全体のテキストのタイピング（1文字ずつ表示）アニメーションを有効または無効にします。
 	'TypeAnimation': true,
 
-	// Enables or disables instant text when moving the game forward.
-	// Enabled - Text will instantly appear when the player moves the text forward.
-	// Disabled - Text will appear at a rapid speed, ignoring pauses.
+	// ゲームを進めるときのテキストの即時表示を有効または無効にします。
+	// 有効 (Enabled) - プレイヤーがテキストを進めると、テキストが瞬時に表示されます。
+	// 無効 (Disabled) - 一時停止を無視して、高速でテキストが表示されます。
 	'InstantText': true,
 
-	// Enables or disables the typing text animation in NVL dialogs for the
-	// whole game.
+	// ゲーム全体の NVL（ノベル）ダイアログにおけるタイピングアニメーションを有効または無効にします。
 	'NVLTypeAnimation': true,
 
-	// Enables or disables the typing animation for the narrator.
-	// If the previous property was set to false, the narrator won't shown
-	// the animation even if this is set to true.
+	// ナレーターのタイピングアニメーションを有効または無効にします。
+	// 前のプロパティが false に設定されている場合、
+	// これが true に設定されていてもナレーターはアニメーションを表示しません。
 	'NarratorTypeAnimation': true,
 
-	// Enables or disables the typing animation for the special centered
-	// character. If the TypeAnimation property was set to false, the centered
-	// character won't show the animation even if this is set to true.
+	// 特殊な中央揃えキャラクターのタイピングアニメーションを有効または無効にします。
+	// TypeAnimation プロパティが false に設定されている場合、これが true に設定されていても
+	// 中央揃えキャラクターはアニメーションを表示しません。
 	'CenteredTypeAnimation': true,
 
-	// Force some orientation on mobile devices. If this setting is set either
-	// to portrait or landscape, a warning message will be displayed so the
-	// player rotates its device.
-	// Possible values: any, portrait or landscape.
+	// モバイルデバイスでの画面の向きを強制します。
+	// この設定が portrait（縦向き）または landscape（横向き）のいずれかに設定されている場合、
+	// プレイヤーにデバイスの向きを変えるよう促す警告メッセージが表示されます。
+	// 指定可能な値: any, portrait, landscape
 	'Orientation': 'landscape',
 
-	// Allow players to skip through the game. Similar to the auto play feature,
-	// skipping will allow players to go through the game really fast.
-	// If this value is set to 0, no skipping will be allowed but if it's set
-	// to a higher number, skipping will be allowed and that value will be taken
-	// as the speed in milliseconds with which the game will skip through the script
+	// プレイヤーがゲームをスキップできるようにします。
+	// 自動再生機能に似ていますが、スキップ機能によりプレイヤーはゲームを非常に高速に進めることができます。
+	// この値が 0 に設定されている場合、スキップは許可されません。
+	// より高い数値に設定されている場合、スキップが許可され、
+	// その値がスクリプトをスキップする速度（ミリ秒単位）として扱われます。
 	'Skip': 0,
 
-	// Define the directories where the assets are located. The root directory is
-	// the holder for the other asset specific directories, this directories are
-	// used when retrieving the files on the game.
+	// アセットが配置されているディレクトリを定義します。
+	// ルートディレクトリは他のアセット固有ディレクトリの親であり、
+	// これらのディレクトリはゲーム内でファイルを取得する際に使用されます。
 	'AssetsPath': {
 		'root': 'assets',
 		'characters': 'characters',
@@ -115,54 +116,54 @@ monogatari.settings({
 		'gallery': 'gallery'
 	},
 
-	// Name of the Splash Screen Label. If a name is given and a label with that
-	// name exists on the game's script, it will be used to show a splash screen
-	// right after the loading screen.
+	// スプラッシュ画面のラベル名。
+	// 名前が指定されており、その名前のラベルがゲームのスクリプトに存在する場合、
+	// 読み込み画面の直後にスプラッシュ画面を表示するために使用されます。
 	'SplashScreenLabel': '_SplashScreen',
 
-	// Define what storage engine should be used to save the game data. *
-	// Adapters Available:
-	// - LocalStorage: This one is used by default
-	// - SessionStorage: Same as LocalStorage but will be cleared when the page
-	// 					 is closed.
-	// - IndexedDB: The information is saved using the IndexedDB web API
-	// - RemoteStorage: The information will be sent and retrieved from a given
-	//					URL Endpoint providing a REST API.
+	// ゲームデータを保存するために使用するストレージエンジンを定義します。 *
+	// 利用可能なアダプター:
+	// - LocalStorage: デフォルトで使用されます
+	// - SessionStorage: LocalStorage と同様ですが、ページが閉じられたときにクリアされます。
+	// - IndexedDB: IndexedDB Web API を使用して情報が保存されます
+	// - RemoteStorage: REST API を提供する指定された URL エンドポイントとの間で
+	//				  情報の送受信を行います。
 	'Storage': {
 		'Adapter': 'IndexedDB',
 		'Store': 'GameData',
 		'Endpoint': ''
 	},
 
-	// Whether players can go back to previous points of the game or not.
-	// Default: true
-	// If this is set to false, the "Back" button on the quick menu will not be
-	// shown and the left arrow keyboard shortcut will be disabled.
+	// プレイヤーがゲーム内の以前のポイントに戻ることができるかどうか。
+	// デフォルト: true
+	// これが false に設定されている場合、クイックメニューの「戻る (Back)」ボタンは
+	// 表示されず、左矢印キーボードのショートカットが無効になります。
 	'AllowRollback': true,
 
-	// Whether experimental features should be enabled or not. Default: false
-	// These features are unfinished and unstable, chances are they will still
-	// go through a lot of changes and functionality won't have any backward
-	// compatibility rendering your save files unusable on many cases.
+	// 実験的機能を有効にするかどうか。
+	// デフォルト: false
+	// これらの機能は未完成かつ不安定であり、今後多くの変更が加えられる可能性が高いため、
+	// 下位互換性がなく、多くのケースでセーブファイルが使用できなくなる可能性があります。
 	'ExperimentalFeatures': false,
 
-	// Whether a screenshot of the game should be captured and stored alongside
-	// each save slot, to be shown as a thumbnail on the save/load screens.
-	// The capture works by inlining every image currently on screen, so any
-	// background or character image served from a different origin must send
-	// CORS headers (Access-Control-Allow-Origin); cross-origin assets without
-	// CORS are captured as black. Same-origin assets always work.
-	// Default: false
+	// 各セーブスロットと一緒にゲームのスクリーンショットをキャプチャして保存し、
+	// セーブ/ロード画面にサムネイルとして表示するかどうか。
+	// キャプチャは画面上のすべての画像をインライン化することで機能するため、
+	// 別のオリジンから提供される背景やキャラクターの画像は、
+	// CORS ヘッダー(Access-Control-Allow-Origin) を送信する必要があります。
+	// CORS のないクロスオリジンアセットは黒色としてキャプチャされます。
+	// 同一オリジン（同一生成元）のアセットは常に機能します。
+	// デフォルト: false
 	'Screenshots': true
 });
 
-// Initial Settings
+// 初期設定（プレーファレンス）
 monogatari.preferences ({
 
-	// Initial Language for Multilanguage Games or for the Default GUI Language.
+	// 多言語ゲーム、またはデフォルトの GUI 言語の初期言語。
 	'Language': 'English',
 
-	// Initial Volumes from 0.0 to 1.
+	// 0.0 から 1 までの初期音量。
 	'Volume': {
 		'Music': 1,
 		'Voice': 1,
@@ -170,15 +171,14 @@ monogatari.preferences ({
 		'Video': 1
 	},
 
-	// Initial resolution used for Electron, it must match the settings inside
-	// the electron.js file. This has no effect on web deployed novels.
+	// Electron で使用される初期解像度。electron.js ファイル内の設定と
+	// 一致している必要があります。Web 上で公開されるノベルには影響しません。
 	'Resolution': '800x600',
 
-	// Speed at which dialog text will appear
+	// ダイアログのテキストが表示される速度
 	'TextSpeed': 20,
 
-	// Speed at which the Auto Play feature will show the next statement
-	// It is measured in seconds and starts counting after the text is
-	// completely displayed.
+	// 自動再生（オートプレイ）機能が次の文を表示する速度
+	// 秒単位で測定され、テキストが完全に表示された後にカウントが始まります。
 	'AutoPlaySpeed': 5
 });

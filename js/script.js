@@ -1,6 +1,6 @@
 /* global monogatari */
 
-// Define the messages used in the game.
+// ゲーム内で使用されるメッセージを定義
 monogatari.action ('message').messages ({
 	'Help': {
 		title: 'Help',
@@ -12,7 +12,7 @@ monogatari.action ('message').messages ({
 	}
 });
 
-// Define the notifications used in the game
+// ゲーム内で使用される通知を定義
 monogatari.action ('notification').notifications ({
 	'Welcome': {
 		title: 'Welcome',
@@ -21,59 +21,59 @@ monogatari.action ('notification').notifications ({
 	}
 });
 
-// Define the Particles JS Configurations used in the game
+// ゲーム内で使用される Particles JS の設定を定義
 monogatari.action ('particles').particles ({
 
 });
 
-// Define the canvas objects used in the game
+// ゲーム内で使用されるキャンバスオブジェクトを定義
 monogatari.action ('canvas').objects ({
 
 });
 
-// Credits of the people involved in the creation of this awesome game
+// この素晴らしいゲームの制作に関わった人々のクレジット
 monogatari.configuration ('credits', {
 
 });
 
 
-// Define the images that will be available on your game's image gallery
+// ゲームの画像ギャラリーで利用可能になる画像を定義
 monogatari.assets ('gallery', {
 
 });
 
-// Define the music used in the game.
+// ゲーム内で使用される BGM（音楽）を定義
 monogatari.assets ('music', {
 
 });
 
-// Define the voice files used in the game.
+// ゲーム内で使用されるボイスファイルを定義
 monogatari.assets ('voices', {
 
 });
 
-// Define the sounds used in the game.
+// ゲーム内で使用される効果音を定義
 monogatari.assets ('sounds', {
 
 });
 
-// Define the videos used in the game.
+// ゲーム内で使用される動画を定義
 monogatari.assets ('videos', {
 
 });
 
-// Define the images used in the game.
+// ゲーム内で使用される画像を定義
 monogatari.assets ('images', {
 
 });
 
-// Define the backgrounds for each scene.
+// 各シーンの背景画像を定義
 monogatari.assets ('scenes', {
 
 });
 
 
-// Define the Characters
+// 登場人物（キャラクター）を定義
 monogatari.characters ({
 	'y': {
 		name: 'Yui',
@@ -81,8 +81,8 @@ monogatari.characters ({
 	}
 });
 
+// スタート
 monogatari.script ({
-	// The game starts here.
 	'Start': [
 		'show scene #f7f6f6 with fadeIn',
 		'show notification Welcome',

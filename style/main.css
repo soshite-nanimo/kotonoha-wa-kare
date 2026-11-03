@@ -1,160 +1,160 @@
 /**
  * =============================================================================
- * This is the file where all your styling should go in.
- * Instead of modifying the styles found in the monogatari.css file or others,
- * you should overwrite those styles in this file.
+ * ここはすべてのカスタムスタイルを記述するファイルです。
+ * monogatari.cssファイルやその他のファイルにあるスタイルを直接変更する代わりに、
+ * このファイル内でそれらのスタイルを上書きしてください。
  *
- * The CSS selectors shown are not an extensive list but they are the most
- * common you might want to change. To find what other elements are available,
- * you can take a look at the monogatari.css file or use your browser's dev
- * tools to inspect the elements.
+ * 表示されているCSSセレクタは網羅的なリストではありませんが、
+ * 変更する可能性が最も高い一般的なものです。他の要素が利用可能かどうかを確認するには、
+ * monogatari.cssファイルを確認するか、ブラウザの開発者ツールを使用して
+ * 要素を検証してください。
  * =============================================================================
 **/
 
 /**
  * ===========================
- * General Styling
+ * 一般的なスタイル (General Styling)
  * ===========================
 **/
 
-/* General Style */
+/* 一般的なスタイル */
 body {
 
 }
 
-/* Simple Button styles*/
+/* シンプルなボタンスタイル */
 button {
 
 }
 
-/* Simple Button Style on Hover */
+/* ホバー時のシンプルなボタンスタイル */
 button:hover {
 
 }
 
-/* General Styling for Menu Screens */
+/* メニュー画面の一般的なスタイル */
 [data-screen] {
 
 }
 
 /**
  * ===========================
- * Main Menu Styling
+ * メインメニューのスタイル (Main Menu Styling)
  * ===========================
 **/
 
-/* Main Menu Styling */
+/* メインメニューのスタイル */
 [data-screen="main"] {
 
 }
 
-/* Main Menu Buttons Styling */
+/* メインメニューのボタンスタイル */
 [data-screen="main"] button {
 
 }
 
 /**
  * ===========================
- * Save and Load Menus Styling
+ * セーブおよびロードメニューのスタイル (Save and Load Menus Styling)
  * ===========================
 **/
 
-/* Slots Style */
+/* スロットのスタイル */
 [data-component="save-slot"] figure {
 
 }
 
-/* Slot's Image Style */
+/* スロットの画像スタイル */
 [data-component="save-slot"] img {
 
 }
 
-/* Slots Title Style */
+/* スロットのタイトルスタイル */
 [data-component="save-slot"] figcaption {
 
 }
 
-/* Slots Delete Button Style */
+/* スロットの削除ボタンスタイル */
 [data-component="save-slot"] button {
 
 }
 
 /**
  * ===========================
- * Game Elements Styling
+ * ゲーム要素のスタイル (Game Elements Styling)
  * ===========================
 **/
 
-/* Choice Buttons style */
+/* 選択肢ボタンのスタイル */
 [data-component="choice-container"] button {
 
 }
 
-/* Choice Button Style on Hover */
+/* ホバー時の選択肢ボタンスタイル */
 [data-component="choice-container"] button:hover {
 
 }
 
-/* Text Box styling */
+/* テキストボックスのスタイル */
 [data-component="text-box"] {
 
 }
 
-/* Character Name Style */
+/* キャラクター名のスタイル */
 [data-ui="who"] {
 
 }
 
-/* Style for Centered Text */
+/* 中央揃えテキストのスタイル */
 [data-component="centered-dialog"] {
 
 }
 
-/* Character Images Styles */
+/* キャラクター画像のスタイル */
 [data-screen="game"] [data-character] {
 
 }
 
-/* Other Images Styles */
+/* その他の画像のスタイル */
 [data-screen="game"] [data-image] {
 
 }
 
 /**
  * ===========================
- * Quick Menu Styling
+ * クイックメニューのスタイル (Quick Menu Styling)
  * ===========================
 **/
 
-/* These styles are applied to the Mobile version of the Quick Menu */
+/* これらのスタイルはクイックメニューのモバイル版に適用されます */
 
-/* Quick Menu Style */
+/* クイックメニューのスタイル */
 [data-component="quick-menu"] {
 
 }
 
-/* Quick Menu Buttons Style */
+/* クイックメニューボタンのスタイル */
 [data-component="quick-menu"] span {
 
 }
 
-/* Quick Menu Buttons Style on Hover */
+/* ホバー時のクイックメニューボタンのスタイル */
 [data-component="quick-menu"] span:hover {
 
 }
 
-/* Quick Menu Buttons Icon Style */
+/* クイックメニューボタンのアイコンスタイル */
 [data-component="quick-menu"] > span > .fa {
 
 }
 
 /**
  * ===========================
- * Range Styling
+ * レンジ（スライダー）のスタイル (Range Styling)
  * ===========================
 **/
 
-/* Use the background property to set a color for these */
+/* これらに色を設定するには background プロパティを使用してください */
 input[type=range]:focus::-webkit-slider-runnable-track {
 
 }
@@ -183,57 +183,57 @@ input[type=range]::-ms-fill-upper {
 
 }
 
-/** Medium Screens, Phablets (601px) **/
+/** 中規模画面、ファブレット (601px) **/
 @media screen and (min-width: 37.56255em) {
-	/* Styles for the desktop version of the Quick Menu */
+    /* クイックメニューのデスクトップ版用スタイル */
 
-	/* Quick Menu Style */
+    /* クイックメニューのスタイル */
 	[data-component="quick-menu"] {
 
-	}
+    }
 
-	/* Quick Menu Buttons Style */
+    /* クイックメニューボタンのスタイル */
 	[data-component="quick-menu"] span {
 
-	}
+    }
 
-	/* Quick Menu Buttons Style on Hover */
+    /* ホバー時のクイックメニューボタンのスタイル */
 	[data-component="quick-menu"] span:hover {
 
-	}
+    }
 }
 
-/** Medium Devices, Tablets (992px)**/
+/** 中規模デバイス、タブレット (992px) **/
 @media screen and (min-width: 62em) {
 
 }
 
-/** HD Screen, Large Devices, Wide Screens, Desktop (1200px) **/
+/** HD画面、大規模デバイス、ワイド画面、デスクトップ (1200px) **/
 @media screen and (min-width: 75em) {
 
 }
 
-/** Full HD Screen, Large Devices, Wide Screens, Large Desktops (1920px) **/
+/** フルHD画面、大規模デバイス、ワイド画面、大型デスクトップ (1920px) **/
 @media screen and (min-width: 120em) {
 
 }
 
-/** Retina Screen , Large Devices, Wide Screens(2560px) **/
+/** レティナ画面、大規模デバイス、ワイド画面 (2560px) **/
 @media screen and (min-width: 160em) {
 
 }
 
-/** 4k Screens, Large Devices, Wide Screens (3840px) **/
+/** 4K画面、大規模デバイス、ワイド画面 (3840px) **/
 @media screen and (min-width: 240em) {
 
 }
 
-/** 5k Screens, Large Devices, Wide Screens (5000px) **/
+/** 5K画面、大規模デバイス、ワイド画面 (5000px) **/
 @media screen and (min-width: 312.5em) {
 
 }
 
-/** 8k Screens, Large Devices, Wide Screens (8000px) **/
+/** 8K画面、大規模デバイス、ワイド画面 (8000px) **/
 @media screen and (min-width: 500em) {
 
 }

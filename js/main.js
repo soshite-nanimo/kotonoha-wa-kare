@@ -3,36 +3,34 @@
 
 /**
  * =============================================================================
- * This is the file where you should put all your custom JavaScript code,
- * depending on what you want to do, there are 3 different places in this file
- * where you can add code.
+ * ここはすべてのカスタムJavaScriptコードを記述するファイルです。
+ * 行いたいことに応じて、このファイル内にはコードを追加できる場所が3箇所あります。
  *
- * 1. Outside the $_ready function: At this point, the page may not be fully
- *    loaded yet, however you can interact with Monogatari to register new
- *    actions, components, labels, characters, etc.
+ * 1. $_ready関数の外側: この時点ではページが完全に読み込まれていない可能性がありますが、
+ *    Monogatariとやり取りして新しいアクション、コンポーネント、ラベル、キャラクターなどを登録できます。
  *
- * 2. Inside the $_ready function: At this point, the page has been loaded, and
- *    you can now interact with the HTML elements on it.
+ * 2. $_ready関数の内側: この時点ではページが読み込まれており、
+ *    ページ上のHTML要素とやり取りできるようになります。
  *
- * 3. Inside the init function: At this point, Monogatari has been initialized,
- *    the event listeners for its inner workings have been registered, assets
- *    have been preloaded (if enabled) and your game is ready to be played.
+ * 3. init関数の内側: この時点ではMonogatariの初期化が完了し、
+ *    内部処理用のイベントリスナーの登録、アセットの事前読み込み（有効な場合）が終わり、
+ *    ゲームをプレイする準備が整っています。
  *
- * You should always keep the $_ready function as the last thing on this file.
+ * $_ready関数は常にこのファイルの最後に配置するようにしてください。
  * =============================================================================
  **/
 
 const { $_ready, $_ } = Monogatari;
 
-// 1. Outside the $_ready function:
+// 1. $_ready関数の外側:
 
 monogatari.debug.level(5);
 
 $_ready (() => {
-	// 2. Inside the $_ready function:
+    // 2. $_ready関数の内側:
 
-	monogatari.init ('#monogatari').then (() => {
-		// 3. Inside the init function:
+    monogatari.init ('#monogatari').then (() => {
+        // 3. init関数の内側:
 
-	});
+    });
 });
